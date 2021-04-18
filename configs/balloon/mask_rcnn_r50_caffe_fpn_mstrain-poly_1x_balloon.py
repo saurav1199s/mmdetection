@@ -1,4 +1,4 @@
-_base_ = 'mask_rcnn/mask_rcnn_r50_caffe_fpn_mstrain-poly_1x_coco.py'
+_base_ = '../mask_rcnn/mask_rcnn_r50_caffe_fpn_mstrain-poly_1x_coco.py'
 
 # We also need to change the num_classes in head to match the dataset's annotation
 model = dict(
