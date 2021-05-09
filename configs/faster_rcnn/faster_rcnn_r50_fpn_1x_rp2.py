@@ -21,8 +21,8 @@ data = dict(
         type=dataset_type,
         # explicitly add your class names to the field `classes`
         classes=classes,
-        ann_file='VisDrone2019-DET-test-challenge/annotations.json',
-        img_prefix='VisDrone2019-DET-test-challenge/images'))
+        ann_file='VisDrone2019-DET-val/annotations.json',
+        img_prefix='VisDrone2019-DET-val/images'))
 
 # 2. model settings
 
