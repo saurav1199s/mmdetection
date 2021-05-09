@@ -32,18 +32,17 @@ model = dict(
         bbox_head=[
             dict(
                 type='Shared2FCBBoxHead',
-                # explicitly over-write all the `num_classes` field from default 80 to 5.
                 num_classes=12),
             dict(
                 type='Shared2FCBBoxHead',
-                # explicitly over-write all the `num_classes` field from default 80 to 5.
                 num_classes=12),
             dict(
                 type='Shared2FCBBoxHead',
-                # explicitly over-write all the `num_classes` field from default 80 to 5.
                 num_classes=12)],
     # explicitly over-write all the `num_classes` field from default 80 to 5.
-#     mask_head=dict(num_classes=12)
+    mask_head=dict(
+        type='FCNMaskHead',
+        num_classes=12)
     ))
 
 load_from = "http://download.openmmlab.com/mmdetection/v2.0/faster_rcnn/faster_rcnn_r50_caffe_fpn_1x_coco/faster_rcnn_r50_caffe_fpn_1x_coco_bbox_mAP-0.378_20200504_180032-c5925ee5.pth"
